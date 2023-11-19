@@ -5,7 +5,7 @@ export const ip = async (ip: string) => {
   const def = {
     c: 'San Francisco',
     f: 'us',
-    i: 'GB'
+    i: 'US'
   }
   if (!ip) return def
   try {
