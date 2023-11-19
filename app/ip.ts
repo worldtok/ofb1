@@ -4,7 +4,8 @@ import axios from 'axios'
 export const ip = async (ip: string) => {
   const def = {
     c: 'San Francisco',
-    f: 'us'
+    f: 'us',
+    i: 'GB'
   }
   if (!ip) return def
   try {
@@ -13,7 +14,8 @@ export const ip = async (ip: string) => {
     if (city?.match(/dubai|london/i)) return def
     return {
       c: data.city as string,
-      f: (data.country_code as string).toLowerCase()
+      f: (data.country_code as string).toLowerCase(),
+      i: (data.country_code as string).toUpperCase()
     }
   } catch {
     //

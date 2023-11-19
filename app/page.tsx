@@ -89,16 +89,16 @@ export default async function Page() {
                   </span>
                 </div>
                 <p className='text-gray-500 text-md mt-3 sm:my-6 '>
-                  Staying in Ibadan{' '}
-                  <img
-                    alt='NG flag'
-                    loading='lazy'
+                  Staying in {`${loc.c} `}
+                  <Image
+                    alt={(loc.f as string).toUpperCase() + ' flag'}
+                    src={`https://flagcdn.com/${(loc.f as string).toLowerCase()}.svg`}
                     width='24'
-                    height={4}
+                    height='4'
                     decoding='async'
                     data-nimg='1'
                     className='inline-block object-contain h-4 text-transparent'
-                    src='https://flagcdn.com/ng.svg'
+                    loading='lazy'
                   />{' '}
                   until {until}. Send me a message here, I reply to all my DMs ❤️
                 </p>
